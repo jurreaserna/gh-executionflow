@@ -21,6 +21,7 @@ jobs:
         shell: bash
         run: |
           echo "release-version=$(echo ${GITHUB_REF:10})"
+          echo "${{ toJSON(github) }}"
       - name: Get Code
         uses: actions/checkout@v3
       - name: Install NodeJS
